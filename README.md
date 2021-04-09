@@ -20,7 +20,7 @@ plataforma de monitoramento em nuvem Tago.io
 
 # Video
 
-[![Watch the video](https://youtu.be/vt5fpE0bzSY)
+![Watch the video](https://youtu.be/vt5fpE0bzSY)
 
 
 
