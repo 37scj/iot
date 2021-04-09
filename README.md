@@ -24,7 +24,7 @@ plataforma de monitoramento em nuvem Tago.io
   e conexão de wifi para envio de informações via procolo https com o esp2866.
     
    - No Codigo nós definimos em qual o pino o DHT11 se encontra, no nosso caso é o DHTPIN D4, a 
-     representação do DHTPIN D4 é a portal GPIO02.   
+     representação do DHTPIN D4 é a porta GPIO02.   
      
      - ![circuito](/assets/circuito.jpg)
      
