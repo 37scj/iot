@@ -4,7 +4,7 @@ Objetivo:
 
   Solução para coleta e envio de dados  via sensor DHT11 e ESP8266.
 
-![Fluxo](/assets/nodemcu.png)
+![Fluxo](/assets/imgReal.png)
 
 # Exemplo de esquematico DHT11 + ESP8266:
 
