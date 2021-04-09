@@ -30,7 +30,8 @@ plataforma de monitoramento em nuvem Tago.io
 
 # Video:
 
-![Video](https://www.youtube.com/watch?v=Rnye98CtzP4)
+[![Little red riding hood](http://i.imgur.com/7YTMFQp.png)](https://www.youtube.com/watch?v=Rnye98CtzP4 "Little red riding hood - Click to Watch!")
+
 
 
 
