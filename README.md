@@ -12,7 +12,7 @@ Objetivo:
 
 Como funciona:
 
-
+![Fluxo](/Iot.png)
 
 
 
