@@ -8,7 +8,7 @@ Objetivo:
 
 # Exemplo de esquematico DHT11 + ESP8266:
 
-![Fluxo](/esquematico.PNG)
+![Fluxo](/assets/esquematico.PNG)
 
 # Como funciona:
 
