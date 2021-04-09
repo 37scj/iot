@@ -22,12 +22,15 @@ plataforma de monitoramento em nuvem Tago.io
   Estamos utilizando duas bibliotecas para realizar a captura dos dados do dht11 
   e conexão de wifi para envio de informações via procolo https com o esp2866.
   
-  No Codigo nós definimos em qual o pino o DHT11 se encontra, no nosso caso é o DHTPIN D4, a 
-  representação do DHTPIN D4 é a portal GPIO02.
- 
+     - No Codigo nós definimos em qual o pino o DHT11 se encontra, no nosso caso é o DHTPIN D4, a 
+      representação do DHTPIN D4 é a portal GPIO02.
+      
+     - Setamos o SSID da rede WiFi e senha
+     - Endpoint e API Key fornecida pelo tago.io
+     - 
+      
   ![circuito](/circuito.jpg)
   
-
 # Video:
 
 [Video](https://www.youtube.com/watch?v=Rnye98CtzP4 "Montagem")
