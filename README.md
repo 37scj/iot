@@ -30,7 +30,7 @@ plataforma de monitoramento em nuvem Tago.io
      
    - Setamos o SSID da rede WiFi e senha.
    
-   - Endpoint e API Key fornecida pelo tago.io.
+   - Setamos o endpoint e API Key fornecida pelo tago.io.
     
    - No metodo setup nos setamos a porta seria 9600 para facilitar a leitura de informação e 
      utilizamos os recursos da biblioteca esp2866 para realizar uma conexão via wifi.
