@@ -24,13 +24,12 @@ plataforma de monitoramento em nuvem Tago.io
   
   ![circuito](/circuito.jpg)
   
-     - No Codigo nós definimos em qual o pino o DHT11 se encontra, no nosso caso é o DHTPIN D4, a 
-      representação do DHTPIN D4 é a portal GPIO02.
-      
-     - Setamos o SSID da rede WiFi e senha
-     - Endpoint e API Key fornecida pelo tago.io
-     - No metodo setup nos setamos a porta seria 9600 para facilitar a leitura de informação e 
-        utilizamos os recursos da biblioteca esp2866 para realizar uma conexão via wifi
+   - No Codigo nós definimos em qual o pino o DHT11 se encontra, no nosso caso é o DHTPIN D4, a 
+     representação do DHTPIN D4 é a portal GPIO02.   
+   - Setamos o SSID da rede WiFi e senha.
+   - Endpoint e API Key fornecida pelo tago.io.
+   - No metodo setup nos setamos a porta seria 9600 para facilitar a leitura de informação e 
+     utilizamos os recursos da biblioteca esp2866 para realizar uma conexão via wifi.
 
       
 # Video:
