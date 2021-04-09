@@ -8,7 +8,7 @@ Objetivo:
   e exibido graficamente.
 
 
-![Fluxo](/fluxo.png)
+![Fluxo](/fluxo.jpeg)
 
 
   
