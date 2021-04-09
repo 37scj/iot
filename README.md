@@ -22,7 +22,7 @@ plataforma de monitoramento em nuvem Tago.io
   No Codigo nós definimos em qual o pino o DHT11 se encontra, no nosso caso é o DHTPIN D4, a 
   representação do DHTPIN D4 é a portal GPIO02.
  
-  ![circuito](circuito/.jpg)
+  ![circuito](/circuito.jpg)
   
 
 # Video
