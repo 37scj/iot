@@ -3,14 +3,14 @@
 //Include da lib de Wifi do ESP8266
 #include <ESP8266WiFi.h>
 
-
+//PIN
 #define DHTTYPE DHT11
 #define DHTPIN D4
 
 //Definir o SSID da rede WiFi
-const char* ssid = "Tomas";
+const char* ssid = "NOME_WIFI";
 //Definir a senha da rede WiFi
-const char* password = "30914182";
+const char* password = "SENHA_WIFI";
 
 //Colocar a API Key para escrita neste campo
 //Ela é fornecida no canal que foi criado na aba API Keys
@@ -22,11 +22,11 @@ DHT dht(DHTPIN, DHTTYPE);
 WiFiClient client;
 
 long previousMillis = 0;        // Variável de controle do tempo
-long readDelay = 500;     // Tempo em ms do intervalo a ser executado
+long readDelay = 10000;     // Tempo em ms do intervalo a ser executado
 unsigned long currentMillis = 0;
 
 void setup() {
-  //Configuração da UART
+  //Configuração da Porta serial
   Serial.begin(9600);
 
   Serial.print("Conectando na rede ");
@@ -50,8 +50,8 @@ void setup() {
   Serial.println(WiFi.localIP());
 }
 
+// Metodo responsavel por receber a temperatura e umidade e realizar uma requisicao do tipo POST para a api do Tago.io
 void envia_dados(float temp,float umidade){
-
 
   //Inicia um client TCP para o envio dos dados
   if (client.connect(server,80)) {
@@ -90,15 +90,16 @@ void envia_dados(float temp,float umidade){
 
   }
   client.stop();
-
 }
 
+// Metodo responsavel por fazer o calculo da temperura de farenheight para celsius
 float FtoC(float fahr){ 
   return (fahr-32.0) * (5.0/9.0); 
 }
 
+//Enviando os dados de 10 em 10 segundos
 void loop() {
- 
+  
   delay(readDelay);
 
    float temp = FtoC(dht.readTemperature());
