@@ -12,7 +12,7 @@ A cada 10 segundos o ESP8266 vai ler os dados do sensor e enviá-los
 através da conexão Wi-Fi a um servidor WEB via requisição HTTP(POST) Para
 plataforma de monitoramento em nuvem Tago.io
 
-![Fluxo](/fluxo.PNG)
+![Fluxo](/Iot.png)
 
 
 
