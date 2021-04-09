@@ -2,7 +2,7 @@
 
 Objetivo:
 
-  Solução para coletar dados via sensor DHT11 de temperatura e umidade.
+  Solução para coleta e envio de dados  via sensor DHT11 e ESP8266.
 
 ![Fluxo](/assets/nodemcu.png)
 
