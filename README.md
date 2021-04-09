@@ -7,8 +7,13 @@ Objetivo:
   A cada 10 segundos são enviados dados para o Tago.io, dados de temperatura e umidade capturado naquele instante
   e exibido graficamente.
 
-
 ![Fluxo](/fluxo.PNG)
+
+
+Como funciona:
+
+
+
 
 
   
