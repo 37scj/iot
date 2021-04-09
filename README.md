@@ -4,7 +4,7 @@ Objetivo:
 
   Solução para coletar dados via sensor DHT11 de temperatura e umidade.
 
-![Fluxo](/fluxo.PNG)
+![Fluxo](/nodemcu.png)
 
 # Como funciona:
 
