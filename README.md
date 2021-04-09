@@ -6,6 +6,10 @@ Objetivo:
 
 ![Fluxo](/nodemcu.png)
 
+# Exemplo de esquematico DHT11 + ESP8266:
+
+![esquematico](/esquematico.png)
+
 # Como funciona:
 
 A cada 10 segundos o ESP8266 vai ler os dados do sensor e enviá-los 
@@ -14,7 +18,7 @@ plataforma de monitoramento em nuvem Tago.io
 
 ![Fluxo](/img.png)
 
-# Sobre o codigo
+# Sobre o codigo:
 
   Estamos utilizando duas bibliotecas para realizar a captura dos dados do dht11 
   e conexão de wifi para envio de informações via procolo https com o esp2866.
@@ -25,7 +29,7 @@ plataforma de monitoramento em nuvem Tago.io
   ![circuito](/circuito.jpg)
   
 
-# Video
+# Video:
 
 ![Video](https://www.youtube.com/watch?v=Rnye98CtzP4)
 
