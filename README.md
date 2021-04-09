@@ -30,7 +30,7 @@ plataforma de monitoramento em nuvem Tago.io
 
 # Video:
 
-[![montagem](https://imgur.com/a/e5iyJ8h)](https://www.youtube.com/watch?v=Rnye98CtzP4 "Montagem")
+[![montagem](http://imgur.com/a/e5iyJ8h)](https://www.youtube.com/watch?v=Rnye98CtzP4 "Montagem")
 
 
 
