@@ -2,17 +2,16 @@
 
 Objetivo:
 
-  Solução para coletar dados via sensor DHT11 de temperatura e umidade,
-  Esse sensor esta instalados na placa esp8266.
-  A cada 10 segundos são enviados dados para o Tago.io, dados de temperatura e umidade capturado naquele instante
-  e exibido graficamente.
+  Solução para coletar dados via sensor DHT11 de temperatura e umidade.
 
 ![Fluxo](/fluxo.PNG)
 
+# Como funciona:
 
-Como funciona:
+A cada 10 segundos o ESP8266 vai ler os dados do sensor e enviá-los 
+através da conexão Wi-Fi a um servidor WEB via requisição HTTP(POST) Para
+plataforma de monitoramento em nuvem Tago.io
 
-![Fluxo](/Iot.png)
 
 
 
