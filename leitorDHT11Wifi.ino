@@ -60,7 +60,7 @@ void envia_dados(float temp,float umidade){
 
     String postStr = "";
     
-    String postData = "[{\"variable\":\"temperature\",\"unit\":\"F\",\"value\":"+String(temp)+"},{\"variable\": \"umidade\",\"unit\": \"%\",\"value\": "+String(umidade)+"}]";
+    String postData = "[{\"variable\":\"temperature\",\"unit\":\"C\",\"value\":"+String(temp)+"},{\"variable\": \"umidade\",\"unit\": \"%\",\"value\": "+String(umidade)+"}]";
 
     postStr = "POST /data HTTP/1.1\n";
     postStr += "Host: api.tago.io\n";
