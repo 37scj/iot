@@ -8,6 +8,7 @@ Objetivo:
 
 # Exemplo de esquematico DHT11 + ESP8266:
 
+![Fluxo](/esquematico.PNG)
 
 # Como funciona:
 
@@ -26,16 +27,24 @@ plataforma de monitoramento em nuvem Tago.io
   
    - No Codigo nós definimos em qual o pino o DHT11 se encontra, no nosso caso é o DHTPIN D4, a 
      representação do DHTPIN D4 é a portal GPIO02.   
+     
    - Setamos o SSID da rede WiFi e senha.
+   
    - Endpoint e API Key fornecida pelo tago.io.
+    
    - No metodo setup nos setamos a porta seria 9600 para facilitar a leitura de informação e 
      utilizamos os recursos da biblioteca esp2866 para realizar uma conexão via wifi.
+     
    - O Metodo envia_dados, é responsavel por receber a temperatura e umidade e realizar uma requisicao do tipo POST para a api do Tago.io
+     passando um json no corpo da requisição
+     
+   - O Metodo Loop é responsavel por obter os dados de temperatura e umidade com um delay de 10 segundos e realizar a chamada do metodo envia_dados
+     para disparar as informações para o tago.io
      
       
 # Video:
 
-[Video](https://www.youtube.com/watch?v=Rnye98CtzP4 "Montagem")
+  - [Video](https://www.youtube.com/watch?v=Rnye98CtzP4 "Montagem")
 
 
 
