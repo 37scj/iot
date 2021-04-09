@@ -16,8 +16,6 @@ plataforma de monitoramento em nuvem Tago.io
 
 # Sobre o codigo
 
-
-
 # Video
 
 ![Watch the video](https://youtu.be/vt5fpE0bzSY)
