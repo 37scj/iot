@@ -14,6 +14,15 @@ plataforma de monitoramento em nuvem Tago.io
 
 ![Fluxo](/img.png)
 
+# Sobre o codigo
+
+
+
+# Video
+
+[![Watch the video](https://youtu.be/vt5fpE0bzSY)
+
+
 
 
 
