@@ -8,7 +8,6 @@ Objetivo:
 
 # Exemplo de esquematico DHT11 + ESP8266:
 
-![esquematico](/8.3-2.png)
 
 # Como funciona:
 
