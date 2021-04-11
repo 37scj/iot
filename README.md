@@ -32,7 +32,7 @@ plataforma de monitoramento em nuvem Tago.io
    
    - Setamos o endpoint e API Key fornecida pelo tago.io.
     
-   - No método setup nos setamos a porta seria 9600 para facilitar a leitura de informação e 
+   - No método setup nos setamos a porta serial 9600 para facilitar a leitura de informação e 
      utilizamos os recursos da biblioteca esp2866 para realizar uma conexão via wifi.
      
    - O Metodo `envia_dados`, é responsavel por receber a temperatura e umidade e realizar uma requisicao do tipo POST para a api do Tago.io
