@@ -14,7 +14,8 @@ Objetivo:
 
 A cada 10 segundos o ESP8266 vai ler os dados do sensor e enviá-los 
 através da conexão Wi-Fi a um servidor WEB via requisição HTTP(POST) Para
-plataforma de monitoramento em nuvem Tago.io
+plataforma de monitoramento em nuvem Tago.io e disponibilizamos via chatbot utilizando o
+canal de comunicação "Telegram" para solicitar o status de temperuta e umidade por texto.
 
 ![Fluxo](/assets/img.png)
 
