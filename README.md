@@ -17,6 +17,7 @@ através da conexão Wi-Fi a um servidor WEB via requisição HTTP(POST) Para
 plataforma de monitoramento em nuvem Tago.io e disponibilizamos via chatbot utilizando o
 canal de comunicação "Telegram" para solicitar o status de temperuta e umidade por texto.
 
+![Fluxo](/assets/telegrama.png)
 ![Fluxo](/assets/img.png)
 
 # Sobre o codigo:
