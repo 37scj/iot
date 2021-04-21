@@ -13,7 +13,7 @@
 #define DHTPIN D4
 
 // Seu token do telegram
-#define BOTtoken "BOT_TOKEN_TELEGRAM" //Add seu botTOKEN
+#define BOTtoken "TOKEN_BOT"  
 
 //Telegram.org Certificate 
 const uint8_t fingerprint[20] = { 0xBB, 0xDC, 0x45, 0x2A, 0x07, 0xE3, 0x4A, 0x71, 0x33, 0x40, 0x32, 0xDA, 0xBE, 0x81, 0xF7, 0x72, 0x6F, 0x4A, 0x2B, 0x6B };
@@ -25,7 +25,7 @@ const char* password = "WIFI_PASSWORD";
 
 //Colocar a API Key para escrita neste campo
 //Ela é fornecida no canal que foi criado na aba API Keys
-String apiKey = "b51f752b-3667-4f78-8306-8ce8e689410d";
+String apiKey = "API_KEY_TAGO_IO";
 const char* server = "api.tago.io";
 int temp = 0;
 
@@ -125,14 +125,12 @@ void readTel()
    {
       id = bot.messages[i].chat_id;//Armazenara o ID do Usuario à Váriavel.
       text = bot.messages[i].text;//Armazenara o TEXTO do Usuario à Váriavel.
-      Serial.println(text);
-
+      
       String from_name = bot.messages[i].from_name;    
-      if (from_name == "") from_name = "Convidado";
     
       if (text == "/start") {
-        String welcome = from_name + ", bem vindo ao Bot da Casa Viebrantz.\n";
-        welcome += "Para interagir com a casa, use um dos comandos a seguir.\n\n";
+        String welcome = from_name + ", bem vindo ao BOT FIAP MBA 2021 , Criado por Lucas e Gabriel\n";
+        welcome += "Para interagir com o bot, use um dos comandos a seguir.\n\n";
         welcome += "/status : para saber o status dos sensores \n";
         bot.sendMessage(id, welcome, "Markdown");
       }
@@ -163,14 +161,15 @@ void setup() {
   connect();//Funçao para Conectar ao WiFi
 }
 
+
+//Enviando os dados de 10 em 10 segundos
 void loop() {
 
-   if (millis() - tempo > 1000)//Faz a verificaçao das funçoes a cada 1 Segundos
+   if (millis() - tempo > 1000)//Faz a verificaçao das funçoes a cada 2 Segundos
    {
       connect();//Funçao para verificar se ainda há conexao
       readTel();//Funçao para ler o telegram
-      envia_dados(); // //Envia dados para o tago.io
+      //envia_dados(); // //Envia dados para o tago.io
       tempo = millis();//Reseta o tempo
-   }
-        
+   }       
 }
