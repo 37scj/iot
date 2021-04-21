@@ -19,6 +19,7 @@ canal de comunicação "Telegram" para solicitar o status de temperuta e umidade
 
 Usando Telegram :
   ![Fluxo](/assets/telegrama.png)
+  ![Fluxo](/botfiap.jpeg)
   
 Usando Tago.io :
   ![Fluxo](/assets/img.png)
