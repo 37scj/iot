@@ -4,8 +4,9 @@ Objetivo:
 
   Solução para coleta e envio de dados  via sensor DHT11 e ESP8266.
 
-![Fluxo](/assets/imgReal.png)
-![Fluxo](/assets/img-02.jpeg)
+IMAGEM                     |  IMAGEM  
+:-------------------------:|:-------------------------:
+![Fluxo](/assets/imgReal.png)  |  ![Fluxo](/assets/img-02.jpeg)
 
 # Exemplo de esquematico:
 
