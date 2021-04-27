@@ -43,6 +43,9 @@ float umidade = 0;
 float agua_raw = 0;
 float agua = 0;
 
+// define o qual é o minimo de umidade na agua.
+float limite_agua = 75;
+
 String id, text;//Váriaveis para armazenamento do ID e TEXTO gerado pelo Usuario
 long readDelay = 200;     // Tempo em ms do intervalo a ser executado
 
@@ -161,6 +164,11 @@ void readTel()
     {
       readDHT(3);
       message = buildMessage();
+    } else if (text.startsWith("/setagua")) //Caso o texto recebido contenha "set off"
+    {
+      message = "Configurando limite de agua de " + String(limite_agua) + " para ";
+      limite_agua = text.substring(9).toFloat();
+      message += String(limite_agua);
     } else if (text == "/seton") //Caso o texto recebido contenha "set on"
     {
       digitalWrite(RELE, HIGH);
@@ -212,17 +220,18 @@ void readTel()
 }
 
 void enviarListaComandos(String id) {
-  bot.sendMessage(id, "/start /status \n/seton /setoff \n/subscribe /unsubscribe", "Markdown");
+  bot.sendMessage(id, "/start /status /seton /setoff /setagua 80.0 \n/subscribe /unsubscribe", "Markdown");
   //Envia uma Mensagem para a pessoa que enviou o Comando.
 }
 
-String buildMessage(){
-  String message="A temperatura é de " + String(temp, 2) + " graus celsius.\n";
-      message += "A umidade relativa do ar é de " + String(umidade, 2) + "%.\n";
-      message += "A umidade da terra é de " + String(agua) + "("+String(agua_raw)+")"+"%.\n";
-      message += "O relê está " + (readSwitch());
+String buildMessage() {
+  String message = "A temperatura é de " + String(temp, 2) + " graus celsius.\n";
+  message += "A umidade relativa do ar é de " + String(umidade, 2) + "%.\n";
+  message += "A umidade da terra é de " + String(agua) + "%." + "(" + String(agua_raw) + ")" + "\n";
+  message += "O relê está " + (readSwitch());
   return message;
 }
+
 void enviarInscritos() {
   int tem = 0;
   for (int i = 0; tem == 0 && i < MAX_SUBSCRIBES; i++) {
@@ -263,6 +272,10 @@ void readDHT(int tentativas) {
     Serial.print(tentativas);
     delay(readDelay);
     readDHT(tentativas--);
+  }
+
+  if (!isnan(agua) && !isnan(limite_agua)) {
+    digitalWrite(RELE, (agua <= limite_agua) ? HIGH : LOW);
   }
 }
 
