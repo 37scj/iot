@@ -5,6 +5,7 @@ Objetivo:
   Solução para coleta e envio de dados  via sensor DHT11 e ESP8266.
 
 ![Fluxo](/assets/imgReal.png)
+![Fluxo](/assets/img-02.jpeg)
 
 # Exemplo de esquematico DHT11 + ESP8266:
 
@@ -17,17 +18,22 @@ através da conexão Wi-Fi a um servidor WEB via requisição HTTP(POST) Para
 plataforma de monitoramento em nuvem Tago.io e disponibilizamos via chatbot utilizando o
 canal de comunicação "Telegram" para solicitar o status de temperuta e umidade por texto.
 
+![Fluxo](/assets/telegrama.png)
+ 
 Usando Telegram :
-  ![Fluxo](/assets/telegrama.png)
-  ![Fluxo](/assets/botfiap.jpeg)
+IMAGEM                     |  IMAGEM  
+:-------------------------:|:-------------------------:
+![Fluxo](/assets/botfiap.jpeg)  |  ![Fluxo](/assets/img-01.jpeg)
+
   
 Usando Tago.io :
   ![Fluxo](/assets/img.png)
 
 # Sobre o codigo:
 
-  Estamos utilizando duas bibliotecas para realizar a captura dos dados do DHT11 
-  e conexão de wifi para envio de informações via procolo https com o esp2866 no NodeMCU.
+  Estamos utilizando tres bibliotecas para realizar a captura dos dados do DHT11 
+  e conexão de wifi para envio de informações via procolo https com o esp2866 no NodeMCU e uma
+  lib para sincronizar informações com o telegram.
     
    - No código foi definido em qual o pino o DHT11 se encontra, no caso é o DHTPIN D4, a 
      representação do DHTPIN D4 é a porta GPIO02.   
@@ -37,19 +43,20 @@ Usando Tago.io :
    - Setamos o `SSID` da rede WiFi e senha.
    
    - Setamos o endpoint e API Key fornecida pelo tago.io.
+   - Setamos o endpoint e API Key do Telegram
     
    - No método setup nos setamos a porta serial 9600 para facilitar a leitura de informação e 
-     utilizamos os recursos da biblioteca esp2866 para realizar uma conexão via wifi.
+     utilizamos os recursos da biblioteca esp2866 para realizar uma conexão via wifi. realizamos
+     configurações para definir o rele , leds e conexão wifi.
      
-   - O Metodo `envia_dados`, é responsavel por receber a temperatura e umidade e realizar uma requisicao do tipo POST para a api do Tago.io
-     passando um json no corpo da requisição
-     
-   - O Metodo `loop` é responsavel por obter os dados de temperatura e umidade com um delay de 10 segundos e realizar a chamada do metodo `envia_dados`
-     para disparar as informações para o tago.io
+   - O Metodo `loop` é responsável por verificar conexão do wifi, por ser
+     um ouvinte para receber mensagens do telegram, disparo de informações para o tago.io e
+     obter os dados de temperatura,umidade,agua com um delay de 0,1 segundos.
      
       
 # Video:
 
-  - [Video](https://www.youtube.com/watch?v=Rnye98CtzP4 "Montagem")
+  - [1 - Video](https://www.youtube.com/watch?v=Rnye98CtzP4 " 1 - Montagem")
+  - [2 - Video](https://www.youtube.com/watch?v=sgqao4sSsZ4 " 2 - Montagem")
 
 
