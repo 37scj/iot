@@ -26,8 +26,9 @@ Usando Tago.io :
 
 # Sobre o codigo:
 
-  Estamos utilizando duas bibliotecas para realizar a captura dos dados do DHT11 
-  e conexão de wifi para envio de informações via procolo https com o esp2866 no NodeMCU.
+  Estamos utilizando tres bibliotecas para realizar a captura dos dados do DHT11 
+  e conexão de wifi para envio de informações via procolo https com o esp2866 no NodeMCU e uma
+  lib para sincronizar informações com o telegram.
     
    - No código foi definido em qual o pino o DHT11 se encontra, no caso é o DHTPIN D4, a 
      representação do DHTPIN D4 é a porta GPIO02.   
@@ -37,15 +38,15 @@ Usando Tago.io :
    - Setamos o `SSID` da rede WiFi e senha.
    
    - Setamos o endpoint e API Key fornecida pelo tago.io.
+   - Setamos o endpoint e API Key do Telegram
     
    - No método setup nos setamos a porta serial 9600 para facilitar a leitura de informação e 
-     utilizamos os recursos da biblioteca esp2866 para realizar uma conexão via wifi.
+     utilizamos os recursos da biblioteca esp2866 para realizar uma conexão via wifi. realizamos
+     configurações para definir o rele , leds e conexão wifi.
      
-   - O Metodo `envia_dados`, é responsavel por receber a temperatura e umidade e realizar uma requisicao do tipo POST para a api do Tago.io
-     passando um json no corpo da requisição
-     
-   - O Metodo `loop` é responsavel por obter os dados de temperatura e umidade com um delay de 10 segundos e realizar a chamada do metodo `envia_dados`
-     para disparar as informações para o tago.io
+   - O Metodo `loop` é responsável por verificar conexão do wifi, por ser
+     um ouvinte para receber mensagens do telegram, disparo de informações para o tago.io e
+     obter os dados de temperatura,umidade,agua com um delay de 0,1 segundos.
      
       
 # Video:
