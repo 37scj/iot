@@ -6,7 +6,7 @@ Objetivo:
 
 IMAGEM                     |  IMAGEM  
 :-------------------------:|:-------------------------:
-![Fluxo](/assets/imgReal.png)  |  ![Fluxo](/assets/img-02.jpeg)
+ ![Fluxo](/assets/img-02.jpeg) |  ![Fluxo](/assets/imgReal.png) 
 
 # Exemplo de esquematico:
 
