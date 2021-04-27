@@ -2,7 +2,7 @@
 
 Objetivo:
 
-  Solução para coleta e envio de dados  via sensor DHT11 e ESP8266.
+  Solução para coleta e envio de dados  via sensor DHT11 , Higrômetro com ESP8266.
 
 IMAGEM                     |  IMAGEM  
 :-------------------------:|:-------------------------:
