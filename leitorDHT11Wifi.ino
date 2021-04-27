@@ -40,11 +40,11 @@ UniversalTelegramBot bot(BOTtoken, client);
 
 float temp = 0;
 float umidade = 0;
-float umidade_raw = 0;
+float agua_raw = 0;
 float agua = 0;
 
 String id, text;//Váriaveis para armazenamento do ID e TEXTO gerado pelo Usuario
-long readDelay = 100;     // Tempo em ms do intervalo a ser executado
+long readDelay = 200;     // Tempo em ms do intervalo a ser executado
 
 String subs[MAX_SUBSCRIBES];
 String names[MAX_SUBSCRIBES];
@@ -94,7 +94,8 @@ void envia_dados() {
     postData += "{\"variable\":\"water\",\"unit\":\"%\",\"value\":" + String(agua) + "},";
     postData += "{\"variable\":\"temperature\",\"unit\":\"C\",\"value\":" + String(temp) + "},";
     postData += "{\"variable\": \"humidity\",\"unit\": \"%\",\"value\": " + String(umidade) + "}";
-    postData += "{\"variable\": \"humidity_raw\",\"unit\": \"\",\"value\": " + String(umidade_raw) + "}";
+    postData += "{\"variable\": \"water_raw\",\"unit\": \"\",\"value\": " + String(agua_raw) + "}";
+    postData += "{\"variable\": \"water\",\"unit\": \"%\",\"value\": " + String(agua) + "}";
     postData += "]";
 
     String postStr = "";
@@ -137,7 +138,7 @@ void readTel()
     Serial.println("Sem conexão com a internet");
     return;
   }
-  digitalWrite(LED_AZUL, LOW);
+  digitalWrite(LED_AZUL, HIGH);
   Serial.println("Obtendo mensagens do Telegram");
   int newmsg = bot.getUpdates(bot.last_message_received + 1);
   Serial.println("Novas mensagens: " + String(newmsg));
@@ -159,10 +160,7 @@ void readTel()
     } else if (text == "/status") //Caso o texto recebido contenha "status"
     {
       readDHT(3);
-      message = "A temperatura é de " + String(temp, 2) + " graus celsius.\n";
-      message += "A umidade relativa do ar é de " + String(umidade, 2) + "%.\n";
-      message += "A umidade da terra é de " + String(agua) + "%.\n";
-      message += "O relê está " + (readSwitch());
+      message = buildMessage();
     } else if (text == "/seton") //Caso o texto recebido contenha "set on"
     {
       digitalWrite(RELE, HIGH);
@@ -218,6 +216,13 @@ void enviarListaComandos(String id) {
   //Envia uma Mensagem para a pessoa que enviou o Comando.
 }
 
+String buildMessage(){
+  String message="A temperatura é de " + String(temp, 2) + " graus celsius.\n";
+      message += "A umidade relativa do ar é de " + String(umidade, 2) + "%.\n";
+      message += "A umidade da terra é de " + String(agua) + "("+String(agua_raw)+")"+"%.\n";
+      message += "O relê está " + (readSwitch());
+  return message;
+}
 void enviarInscritos() {
   int tem = 0;
   for (int i = 0; tem == 0 && i < MAX_SUBSCRIBES; i++) {
@@ -225,10 +230,7 @@ void enviarInscritos() {
   }
   if (tem == 1) {
     readDHT(3);
-    String message = "A temperatura é de " + String(temp, 2) + " graus celsius.\n";
-    message += "A umidade relativa do ar é de " + String(umidade, 2) + "%.\n";
-    message += "A umidade da terra é de " + String(agua) + "%.\n";
-    message += "O relê está " + (readSwitch());
+    String message = buildMessage();
     message += "\n\nPara sair: /unsubscribe ";
     Serial.println(message);
     for (int i = 0; i < MAX_SUBSCRIBES; i++) {
@@ -250,16 +252,16 @@ void readDHT(int tentativas) {
   Serial.print("Umidade: ");
   Serial.println(umidade);
 
-  agua = analogRead(SENSOR_AGUA);
+  agua_raw = analogRead(SENSOR_AGUA);
   Serial.print("Água: ");
-  Serial.print(agua);
-  agua = map(agua, 350, 1023, 100, 0);
+  Serial.print(agua_raw);
+  agua = map(agua_raw, 350, 1023, 100, 0);
   Serial.print(", mappedTo: ");
   Serial.println(agua);
 
   if (tentativas > 0 && (isnan(agua) || isnan(temp) || isnan(umidade))) {
     Serial.print(tentativas);
-    delay(400);
+    delay(readDelay);
     readDHT(tentativas--);
   }
 }
@@ -305,7 +307,7 @@ void loop() {
   readDHT(1);
   for (int i = 0; i < MAX_SUBSCRIBES; i++) {
     if (subs[i] != "") {
-      Serial.println("Inscrito " + i + ": " + subs[i] + ", ");
+      Serial.println("Inscrito " + String(i) + ": " + subs[i] + ", ");
     }
   }
   delay(100);
