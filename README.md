@@ -51,6 +51,7 @@ Usando Tago.io :
       
 # Video:
 
-  - [Video](https://www.youtube.com/watch?v=Rnye98CtzP4 "Montagem")
+  - [Video](https://www.youtube.com/watch?v=Rnye98CtzP4 " 1 - Montagem")
+  - [Video](https://www.youtube.com/watch?v=sgqao4sSsZ4 " 2 - Montagem")
 
 
