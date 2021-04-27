@@ -278,6 +278,18 @@ float FtoC(float fahr) {
 }
 
 void setup() {
+  // define rele
+  pinMode(RELE, OUTPUT);
+  digitalWrite(RELE, HIGH);
+  // define o led verde
+  pinMode(LED_VERDE, OUTPUT);
+  digitalWrite(LED_VERDE, HIGH);
+  // define o led verde
+  pinMode(LED_AZUL, OUTPUT);
+  digitalWrite(LED_AZUL, HIGH);
+  // define sensor de agua na porta analogica para leitura
+  pinMode(SENSOR_AGUA, INPUT);
+
   // init inscricoes
   for (int i = 0; i < MAX_SUBSCRIBES; i++) subs[i] = "";
 
@@ -288,14 +300,11 @@ void setup() {
   // fingerprint of Telegram server
   client.setFingerprint(fingerprint);
   client.setInsecure();
-  // define rele
-  pinMode(RELE, OUTPUT);
-  // define o led verde
-  pinMode(LED_VERDE, OUTPUT);
-  // define o led verde
-  pinMode(LED_AZUL, OUTPUT);
-  // define sensor de agua na porta analogica para leitura
-  pinMode(SENSOR_AGUA, INPUT);
+
+
+  // configuração padrão
+  digitalWrite(LED_VERDE, HIGH);
+  digitalWrite(RELE, LOW);
 }
 
 //Enviando os dados de 10 em 10 segundos
