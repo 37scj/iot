@@ -22,7 +22,6 @@ canal de comunicação "Telegram" para solicitar o status de temperuta e umidade
  
 Usando Telegram :
 
-Solarized dark             |  Solarized Ocean
 :-------------------------:|:-------------------------:
 ![Fluxo](/assets/botfiap.jpeg)  |  ![Fluxo](/assets/img-01.jpeg)
 
