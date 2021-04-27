@@ -5,6 +5,7 @@ Objetivo:
   Solução para coleta e envio de dados  via sensor DHT11 e ESP8266.
 
 ![Fluxo](/assets/imgReal.png)
+![Fluxo](/assets/img-02.jpeg)
 
 # Exemplo de esquematico DHT11 + ESP8266:
 
@@ -20,6 +21,7 @@ canal de comunicação "Telegram" para solicitar o status de temperuta e umidade
 Usando Telegram :
   ![Fluxo](/assets/telegrama.png)
   ![Fluxo](/assets/botfiap.jpeg)
+  ![Fluxo](/assets/img01.jpeg)
   
 Usando Tago.io :
   ![Fluxo](/assets/img.png)
