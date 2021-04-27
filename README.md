@@ -9,8 +9,9 @@ Objetivo:
 
 # Exemplo de esquematico DHT11 + ESP8266:
 
-![Fluxo](/assets/esquematico.PNG)
-![Fluxo](/assets/esquematico2.PNG)
+IMAGEM                     |  IMAGEM  
+:-------------------------:|:-------------------------:
+![Fluxo](/assets/esquematico.PNG)  |  ![Fluxo](/assets/esquematico2.PNG)
 
 # Como funciona:
 
