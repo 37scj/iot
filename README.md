@@ -55,8 +55,8 @@ Usando Tago.io :
      
       
 # Video:
-  - [1 - Video](https://www.youtube.com/watch?v=Rnye98CtzP4 " 1 - Montagem")
-  - [2 - Video](https://www.youtube.com/watch?v=sgqao4sSsZ4 " 2 - Montagem")
-  - [3 - Video](https://www.youtube.com/watch?v=Sl8khDUYwcM " 3 - Montagem")
+  - [Assista Video - 1](https://www.youtube.com/watch?v=Rnye98CtzP4 " 1 - Montagem")
+  - [Assista Video - 2](https://www.youtube.com/watch?v=sgqao4sSsZ4 " 2 - Montagem")
+  - [Assista Video - 3](https://www.youtube.com/watch?v=Sl8khDUYwcM " 3 - Montagem")
 
 
