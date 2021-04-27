@@ -7,7 +7,7 @@ Objetivo:
 ![Fluxo](/assets/imgReal.png)
 ![Fluxo](/assets/img-02.jpeg)
 
-# Exemplo de esquematico DHT11 + ESP8266:
+# Exemplo de esquematico:
 
 IMAGEM                     |  IMAGEM  
 :-------------------------:|:-------------------------:
