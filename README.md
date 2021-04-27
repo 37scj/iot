@@ -11,7 +11,7 @@ Objetivo:
 
 IMAGEM                     |  IMAGEM  
 :-------------------------:|:-------------------------:
-![Fluxo](/assets/esquematico.PNG)  |  ![Fluxo](/assets/esquematico2.PNG)
+![Fluxo](/assets/esquematico.PNG)  |  ![Fluxo](/assets/Capturar.PNG)
 
 # Como funciona:
 
