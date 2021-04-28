@@ -275,7 +275,9 @@ void readDHT(int tentativas) {
   }
 
   if (!isnan(agua) && !isnan(limite_agua)) {
-    digitalWrite(RELE, (agua <= limite_agua) ? HIGH : LOW);
+    bool liga=(agua <= limite_agua);
+    digitalWrite(RELE, liga ? HIGH : LOW);
+    digitalWrite(LED_VERDE, !liga ? HIGH : LOW);
   }
 }
 
@@ -291,6 +293,11 @@ float FtoC(float fahr) {
 }
 
 void setup() {
+  //Configuração da Porta serial
+  Serial.begin(9600);
+  delay(100);
+  dht.begin();
+
   // define rele
   pinMode(RELE, OUTPUT);
   digitalWrite(RELE, HIGH);
@@ -302,26 +309,25 @@ void setup() {
   digitalWrite(LED_AZUL, HIGH);
   // define sensor de agua na porta analogica para leitura
   pinMode(SENSOR_AGUA, INPUT);
-
+    
   // init inscricoes
   for (int i = 0; i < MAX_SUBSCRIBES; i++) subs[i] = "";
 
-  //Configuração da Porta serial
-  Serial.begin(9600);
   WiFi.mode(WIFI_STA);//Define o WiFi como Estaçao
   connect();//Funçao para Conectar ao WiFi
   // fingerprint of Telegram server
   client.setFingerprint(fingerprint);
   client.setInsecure();
 
-
   // configuração padrão
-  digitalWrite(LED_VERDE, HIGH);
+  digitalWrite(LED_VERDE, LOW);
+  digitalWrite(LED_AZUL, LOW);
   digitalWrite(RELE, LOW);
 }
 
 //Enviando os dados de 10 em 10 segundos
 void loop() {
+  
 
   connect();//Funçao para verificar se ainda há conexao
   readTel();//Funçao para ler o telegram
