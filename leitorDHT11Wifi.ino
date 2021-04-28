@@ -94,7 +94,6 @@ void envia_dados() {
     Serial.print("CONNECTED AT TAGO\n");
 
     String postData = "[";
-    postData += "{\"variable\":\"water\",\"unit\":\"%\",\"value\":" + String(agua) + "},";
     postData += "{\"variable\":\"temperature\",\"unit\":\"C\",\"value\":" + String(temp) + "},";
     postData += "{\"variable\": \"humidity\",\"unit\": \"%\",\"value\": " + String(umidade) + "}";
     postData += "{\"variable\": \"water_raw\",\"unit\": \"\",\"value\": " + String(agua_raw) + "}";
